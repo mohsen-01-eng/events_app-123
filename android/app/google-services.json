@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "103187091694",
+    "project_id": "newevents-app",
+    "storage_bucket": "newevents-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103187091694:android:faef7cd14b0215b8d263ff",
+        "android_client_info": {
+          "package_name": "com.mkm.new_events_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo3j-pLVOxSK40Ipgt-I3jUMUX70ywzps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

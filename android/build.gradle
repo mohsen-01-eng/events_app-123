@@ -1,0 +1,18 @@
+buildscript {
+    ext.kotlin_version = '1.8.0' // يمكنك ضبط نسخة الكوتلن حسب المشروع
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.2' // تأكد من أن هذه النسخة متوافقة مع مشروعك
+        classpath 'com.google.gms:google-services:4.3.15' // النسخة المطلوبة من Google Services
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

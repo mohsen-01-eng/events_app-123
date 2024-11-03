@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // إضافة الـ plugin الخاص بـ Google Services
+}
+
+android {
+    namespace 'com.example.yourappname' // ضع اسم الـ package الخاص بتطبيقك هنا
+    compileSdkVersion flutter.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.example.yourappname" // ضع اسم الـ application ID هنا
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:32.0.0') // استخدام BOM لتحديد إصدارات Firebase
+    implementation 'com.google.firebase:firebase-analytics' // إضافة مكتبة Firebase Analytics كمثال
+
+    // أضف هنا مكتبات Firebase الأخرى التي تحتاجها، مثل Firestore، Auth، وغيرها
+    // على سبيل المثال:
+    // implementation 'com.google.firebase:firebase-auth'
+    // implementation 'com.google.firebase:firebase-firestore'
+}
+
+// تأكد من وضع هذا السطر في نهاية الملف
+apply plugin: 'com.google.gms.google-services'
